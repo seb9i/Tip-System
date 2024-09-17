@@ -4,7 +4,7 @@ class cashRegister {
     // Initializing variables that are part of the final receipt
     private final double tipAmount;
     public double bill;
-    public int numberofPeople;
+    public int numberOfPeople;
     public double tipPercentage;
     private final double finalBill;
     private final double tipPerPerson;
@@ -16,13 +16,13 @@ class cashRegister {
         // Calculations
         bill = userBill;
         tipPercentage = usertipPercentage / 100;
-        numberofPeople = usernumberofPeople;
+        numberOfPeople = usernumberofPeople;
 
         tipAmount = tipPercentage * bill;
         finalBill = tipAmount + bill;
 
-        tipPerPerson = tipAmount / numberofPeople;
-        finalPerPerson = finalBill / numberofPeople;
+        tipPerPerson = tipAmount / numberOfPeople;
+        finalPerPerson = finalBill / numberOfPeople;
 
     }
 
@@ -51,8 +51,9 @@ class cashRegister {
                             Tip Per Person: %.2f
                             Final Bill Per Person: %.2f""", getTipAmount(), getFinalBill(), getTipPerPerson(), getFinalPerPerson());
     }
+
 }
-// Class representing the table of people that are ordering
+// Class representing the table of people that are ordering (this is kind of redundant)
 class Table {
     public int numberOfPeople;
     public double Bill;
