@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class cashRegister {
+class CashRegister {
     // Initializing variables that are part of the final receipt
     private final double tipAmount;
     public double bill;
@@ -11,7 +11,7 @@ class cashRegister {
     private final double finalPerPerson;
 
     // Class constructor that accepts the bill, tip percentage, and the number of people
-    public cashRegister(double userBill, double usertipPercentage, int usernumberofPeople) {
+    public CashRegister(double userBill, double usertipPercentage, int usernumberofPeople) {
 
         // Calculations
         bill = userBill;
@@ -53,42 +53,24 @@ class cashRegister {
     }
 
 }
-// Class representing the table of people that are ordering (this is kind of redundant)
-class Table {
-    public int numberOfPeople;
-    public double Bill;
-    public double tipPercentage;
 
-    // Initializer that represents the bill, number of people ordering, and the tip percentage
-    public Table(double userBill, int people, double tip){
-        Bill = userBill;
-        numberOfPeople = people;
-        tipPercentage = tip;
-
-    }
-
-
-}
 public class Main {
 
     public static void main(String[] args){
         // Grabbing user input values
         Scanner scan = new Scanner(System.in);
+
         System.out.print("Enter your bill: ");
-
         double bill = scan.nextDouble();
+
         System.out.print("\nTip Percent (whole number): ");
-
         double tipPercent = scan.nextDouble();
-        System.out.print("\nNumber of People: ");
 
+        System.out.print("\nNumber of People: ");
         int numberOfPeople = scan.nextInt();
 
-        // Initializing Table Class
-        Table myTable = new Table(bill, numberOfPeople, tipPercent);
-
         // Initializing Cash Register Class
-        cashRegister cas = new cashRegister(myTable.Bill, myTable.tipPercentage, myTable.numberOfPeople);
+        CashRegister cas = new CashRegister(bill, tipPercent, numberOfPeople);
 
         // Printing the Receipt
         cas.printReceipt();
