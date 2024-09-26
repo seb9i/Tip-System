@@ -44,10 +44,10 @@ class CashRegister {
                             --------------------------
                             Not Burger King
                             --------------------------
-                            Total Tip Amount: %.2f
-                            Total Bill Cost: %.2f
-                            Tip Per Person: %.2f
-                            Final Bill Per Person: %.2f""", getTipAmount(), getFinalBill(), getTipPerPerson(), getFinalPerPerson());
+                            Total Tip Amount: $%.2f
+                            Total Bill Cost: $%.2f
+                            Tip Per Person: $%.2f
+                            Final Bill Per Person: $%.2f""", getTipAmount(), getFinalBill(), getTipPerPerson(), getFinalPerPerson());
     }
 
 }
